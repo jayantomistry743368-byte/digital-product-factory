@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Digital Product Factory</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body style="font-family: Arial, sans-serif; padding:20px">
+
+  <h2>🧠 Digital Product Factory</h2>
+  <p>Create Sell-Ready Digital Products</p>
+
+  <label><b>Niche</b></label><br>
+  <select id="niche">
+    <option>Business</option>
+    <option>Stock Market</option>
+    <option>Social Media</option>
+    <option>Motivation</option>
+  </select>
+  <br><br>
+
+  <label><b>Product Type</b></label><br>
+  <select id="product">
+    <option>Ebook</option>
+    <option>AI Prompt Pack</option>
+    <option>Wallpaper</option>
+    <option>Planner</option>
+  </select>
+  <br><br>
+
+  <label><b>Topic / Idea</b></label><br>
+  <input id="topic" type="text" placeholder="Enter topic here">
+  <br><br>
+
+  <label><b>Language</b></label><br>
+  <select id="language">
+    <option>Bangla</option>
+    <option>English</option>
+  </select>
+  <br><br>
+
+  <button onclick="generateProduct()">GENERATE PRODUCT</button>
+
+  <hr>
+
+  <div id="output"></div>
+
+  <script>
+    function generateProduct() {
+      var niche = document.getElementById("niche").value;
+      var product = document.getElementById("product").value;
+      var topic = document.getElementById("topic").value;
+      var language = document.getElementById("language").value;
+
+      document.getElementById("output").innerHTML =
+        "<h3>✅ Product Generated</h3>" +
+        "<p><b>Niche:</b> " + niche + "</p>" +
+        "<p><b>Product:</b> " + product + "</p>" +
+        "<p><b>Topic:</b> " + topic + "</p>" +
+        "<p><b>Language:</b> " + language + "</p>" +
+        "<p>(Next step: AI + PDF will connect here)</p>";
+    }
+  </script>
+
+</body>
+</html>
